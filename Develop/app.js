@@ -33,3 +33,86 @@ const render = require("./lib/htmlRenderer");
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
+
+
+const team = [];
+
+// Inquire prompt//
+function employeeInformation() {
+    inquirer
+        .prompt([
+
+            {
+                type: "list",
+                message: "What role do you have in the company?",
+                name: "name",
+                choices: ["Manager", "Engineer", "Intern", "Show Summary"]
+            },
+        ])
+        .then((val) => {
+            if (val.name === "Manager") {
+                managerInformation();
+            }
+            else if (val.name === "Engineer") {
+                engineerInformation();
+            }
+            else if (val.name === "Intern") {
+                internInformation();
+            }
+            else if (val.name === "Show Summary") {
+                generateHTML(outputPath, render(team));
+            }
+
+        });
+}
+ // Manager Prompt // 
+function managerInformation() {
+    return inquirer
+        .prompt([
+            {
+                type: "input",
+                message: "Please enter the Manager's  name.",
+                name: "name"
+            },
+            {
+                type: "input",
+                message: "What is the Manager's ID number ?",
+                name: "id",
+            },
+            {
+                type: "input",
+                message: "What is the Manager's email address?",
+                name: "email",
+            },
+            {
+                type: "input",
+                message: "What is the Managers office number?",
+                name: "number",
+            },
+        ])
+        .then(function (answer) {
+            let manager = new Manager(
+                answer.name,
+                answer.id,
+                answer.email,
+                answer.number,
+            );
+            team.push(manager);
+
+            employeeInformation();
+        });
+}
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
