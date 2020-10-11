@@ -65,7 +65,7 @@ function employeeInformation() {
 
         });
 }
- // Manager Prompt // 
+// Manager Prompt // 
 function managerInformation() {
     return inquirer
         .prompt([
@@ -87,7 +87,7 @@ function managerInformation() {
             {
                 type: "input",
                 message: "What is the Managers office number?",
-                name: "number",
+                name: "officeNumber",
             },
         ])
         .then(function (answer) {
@@ -95,9 +95,45 @@ function managerInformation() {
                 answer.name,
                 answer.id,
                 answer.email,
-                answer.number,
+                answer.officeNumber,
             );
             team.push(manager);
+            employeeInformation();
+        });
+}
+// Engineer Prompt//
+function engineerInformation() {
+    return inquirer
+        .prompt([
+            {
+                type: "input",
+                message: "Please enter the Engineer's  name.",
+                name: "name"
+            },
+            {
+                type: "input",
+                message: "What is the Engineer's ID number ?",
+                name: "id",
+            },
+            {
+                type: "input",
+                message: "What is the Engineer's email address?",
+                name: "email",
+            },
+            {
+                type: "input",
+                message: "What is the Engineer's Github username?",
+                name: "github",
+            },
+        ])
+        .then(function (answer) {
+            let engineer = new Engineer(
+                answer.name,
+                answer.id,
+                answer.email,
+                answer.github,
+            );
+            team.push(engineer);
 
             employeeInformation();
         });
@@ -113,6 +149,6 @@ function managerInformation() {
 
 
 
-        
+
 
 
