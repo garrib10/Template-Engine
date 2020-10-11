@@ -71,12 +71,12 @@ function managerInformation() {
         .prompt([
             {
                 type: "input",
-                message: "Please enter the Manager's  name.",
+                message: "Please enter the Manager's name.",
                 name: "name"
             },
             {
                 type: "input",
-                message: "What is the Manager's ID number ?",
+                message: "What is the Manager's ID number?",
                 name: "id",
             },
             {
@@ -107,12 +107,12 @@ function engineerInformation() {
         .prompt([
             {
                 type: "input",
-                message: "Please enter the Engineer's  name.",
+                message: "Please enter the Engineer's name.",
                 name: "name"
             },
             {
                 type: "input",
-                message: "What is the Engineer's ID number ?",
+                message: "What is the Engineer's ID number?",
                 name: "id",
             },
             {
@@ -139,6 +139,54 @@ function engineerInformation() {
         });
 }
 
+function internInformation() {
+    return inquirer
+        .prompt([
+            {
+                type: "input",
+                message: "Please enter the Intern's name.",
+                name: "name"
+            },
+            {
+                type: "input",
+                message: "What is the Intern's ID number?",
+                name: "id",
+            },
+            {
+                type: "input",
+                message: "What is the Intern's email address?",
+                name: "email",
+            },
+            {
+                type: "input",
+                message: "What school does the Intern currently attend?",
+                name: "school",
+            },
+        ])
+        .then(function (answer) {
+            let intern = new Intern(
+                answer.name,
+                answer.id,
+                answer.email,
+                answer.school,
+            );
+            team.push(intern);
+
+            employeeInformation();
+        });
+}
+
+function generateHTML (fileName,data){
+fs.writeFile(FileName,data, "utf8", function (err) {
+ if (err) {
+  throw err;
+ }
+  console.log ("You have created an Employee Summary");
+});
+}
+
+
+employeeInformation();
 
 
 
