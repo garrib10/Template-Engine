@@ -177,7 +177,7 @@ function internInformation() {
 }
 
 function generateHTML (fileName,data){
-fs.writeFile(FileName,data, "utf8", function (err) {
+fs.writeFile(fileName,data, "utf8", function (err) {
  if (err) {
   throw err;
  }
