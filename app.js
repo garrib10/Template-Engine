@@ -72,22 +72,53 @@ function managerInformation() {
             {
                 type: "input",
                 message: "Please enter the Manager's name.",
-                name: "name"
+                name: "name",
+                validate: (answer) => {
+                    if (answer !== "") {
+                        return true
+                    }
+                    return "Please enter your name"
+                    
+                }
             },
             {
                 type: "input",
                 message: "What is the Manager's ID number?",
                 name: "id",
+                validate: answer => {
+                    const pass = answer.match(/[1-9]{4}/);
+
+                    if(pass) {
+                        return true
+                    }
+                    return "Please enter a 4 digit number"
+                }
             },
             {
                 type: "input",
                 message: "What is the Manager's email address?",
                 name: "email",
+                validate: answer => {
+                    const pass = answer.match(/\S+@\S+\.\S+/);
+
+                    if(pass) {
+                        return true
+                    }
+                    return "Please enter a valid email address"
+                }
             },
             {
                 type: "input",
                 message: "What is the Managers office number?",
                 name: "officeNumber",
+                validate: answer => {
+                    const pass = answer.match(/[1-9]{9}/);
+
+                    if(pass) {
+                        return true
+                    }
+                    return "Please enter a 9 digit number"
+                }
             },
         ])
         .then(function (answer) {
@@ -108,22 +139,53 @@ function engineerInformation() {
             {
                 type: "input",
                 message: "Please enter the Engineer's name.",
-                name: "name"
+                name: "name",
+                validate: (answer) => {
+                    if (answer !== "") {
+                        return true
+                    }
+                    return "Please enter your name"
+                    
+                }
             },
+            
             {
                 type: "input",
                 message: "What is the Engineer's ID number?",
                 name: "id",
+                validate: answer => {
+                    const pass = answer.match(/[1-9]{4}/);
+
+                    if(pass) {
+                        return true
+                    }
+                    return "Please enter a 4 digit number"
+                }
             },
             {
                 type: "input",
                 message: "What is the Engineer's email address?",
                 name: "email",
+                validate: answer => {
+                    const pass = answer.match(/\S+@\S+\.\S+/);
+
+                    if(pass) {
+                        return true
+                    }
+                    return "Please enter a valid email address"
+                }
             },
             {
                 type: "input",
                 message: "What is the Engineer's Github username?",
                 name: "github",
+                validate:  (answer) => {
+                    if (answer !== "") {
+                        return true
+                    }
+                    return "Please enter your name"
+                    
+                }
             },
         ])
         .then(function (answer) {
@@ -145,22 +207,52 @@ function internInformation() {
             {
                 type: "input",
                 message: "Please enter the Intern's name.",
-                name: "name"
+                name: "name",
+                validate:  (answer) => {
+                    if (answer !== "") {
+                        return true
+                    }
+                    return "Please enter your name"
+                    
+                }
             },
             {
                 type: "input",
                 message: "What is the Intern's ID number?",
                 name: "id",
+                validate: answer => {
+                    const pass = answer.match(/[1-9]{4}/);
+
+                    if(pass) {
+                        return true
+                    }
+                    return "Please enter a 4 digit number"
+                }
             },
             {
                 type: "input",
                 message: "What is the Intern's email address?",
                 name: "email",
+                validate: answer => {
+                    const pass = answer.match(/\S+@\S+\.\S+/);
+
+                    if(pass) {
+                        return true
+                    }
+                    return "Please enter a valid email address"
+                }
             },
             {
                 type: "input",
                 message: "What school does the Intern currently attend?",
                 name: "school",
+                validate:  (answer) => {
+                    if (answer !== "") {
+                        return true
+                    }
+                    return "Please enter your school"
+                    
+                }
             },
         ])
         .then(function (answer) {
