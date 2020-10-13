@@ -1,29 +1,27 @@
 {
-  "name": "unit10hw",
+  "name": "template-engine",
   "version": "1.0.0",
-  "description": "OOP and testing for week 10 homework",
+  "description": "# Unit 10 OOP Homework: Template Engine - Employee Summary",
   "main": "app.js",
   "directories": {
     "lib": "lib",
-    "test": "test"
+    "test": "tests"
   },
   "scripts": {
-    "test": "jest --verbose test/*"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stevetrilogy/unit10hw.git"
+    "url": "git+https://github.com/garrib10/Template-Engine.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stevetrilogy/unit10hw/issues"
+    "url": "https://github.com/garrib10/Template-Engine/issues"
   },
-  "homepage": "https://github.com/stevetrilogy/unit10hw#readme",
+  "homepage": "https://github.com/garrib10/Template-Engine#readme",
   "dependencies": {
-    "inquirer": "^6.3.1"
-  },
-  "devDependencies": {
-    "jest": "^24.9.0"
+    "inquirer": "^7.3.3",
+    "jest": "^26.5.3"
   }
 }
