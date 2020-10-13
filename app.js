@@ -183,7 +183,7 @@ function engineerInformation() {
                     if (answer !== "") {
                         return true
                     }
-                    return "Please enter your name"
+                    return "Please enter your Github username"
                     
                 }
             },
