@@ -21,11 +21,6 @@ How do you deliver this? Here are some guidelines:
 
 * Your app will run as a Node CLI to gather information about each employee.
 
-* Below is an example of what your application may look like. Remember, the styling is completely up to you so try to make it unique.
-
-![Employee Summary 1](./Assets/10-OOP-homework-demo-1.png)
-![Employee Summary 2](./Assets/10-OOP-homework-demo-2.png)
-
 In the `Develop` folder, there is a `package.json`, so make sure to `npm install`.
 
 The dependencies are, [jest](https://jestjs.io/) for running the provided tests, and [inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user.
@@ -115,6 +110,11 @@ The project must generate a `team.html` page in the `output` directory, that dis
 Walthrough video  on node app.js : https://drive.google.com/file/d/1ZFV_vRbveWESL2kMvyvkT-bTj1GqR8Ha/view 
 
 Walkthrough video on npm run test: https://drive.google.com/file/d/1sUfhaDXLwmAk2vvAQUf__HD-IzbTJE6c/view  
+
+## Screenshots
+ <img width="1268" alt="Team html in browser" src="https://user-images.githubusercontent.com/68867054/95905559-05800280-0d67-11eb-85c3-6a904091bbaf.png"> 
+
+ <img width="1220" alt="Npm run test " src="https://user-images.githubusercontent.com/68867054/95905622-1892d280-0d67-11eb-9f46-80f4d72d65fc.png">
 
 ## Submission on BCS
 
