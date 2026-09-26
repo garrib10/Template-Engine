@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/garrib10/Template-Engine#readme",
   "dependencies": {
-    "inquirer": "^7.3.3",
+    "inquirer": "^14.2.2",
     "jest": "^30.5.2"
   }
 }
